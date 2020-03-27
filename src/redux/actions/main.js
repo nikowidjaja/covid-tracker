@@ -46,13 +46,15 @@ export const get_profile_by_id = id => {
   };
 };
 
-export const tes=()=>{
+export const get_data=()=>{
   return dispatch=>{
     dispatch(toggle_loader(true));
     axios
     .get("https://pomber.github.io/covid19/timeseries.json?=")
     .then(resp=>{
+      // console.log(resp.data);
       dispatch(put_data("covid_data",resp.data));
+      //resp.data["Indonesia"][resp.data["Indonesia"].length-1]
     })
     .then(() => {
       dispatch(toggle_loader(false));
