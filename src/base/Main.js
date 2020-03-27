@@ -1,30 +1,41 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
-import Home from '../pages/Home';
+import Home from "../pages/Home";
 
-const NoMatch = () => (
-    <div>404 Not Found</div>
-);
+// REDUX
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import * as mainActions from "../redux/actions/main";
+
+const NoMatch = () => <div>404 Not Found</div>;
 
 class Main extends Component {
-
-    render() {
-        return (
-            <Router basename="/">
-				<div id="Main" className="main-panel">
-					<div className="content-container">
-						{/* <ErrorBoundary> */}
-							<Switch>
-								<Route exact path="/" component={Home} />
-								<Route component={NoMatch} />
-							</Switch>
-						{/* </ErrorBoundary> */}
-					</div>
-				</div>
-			</Router>
-        );
-    }
+  render() {
+    return (
+      <Router basename="/">
+        <div id="Main" className="main-panel">
+          <div className="content-container">
+            {/* <ErrorBoundary> */}
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route component={NoMatch} />
+            </Switch>
+            {/* </ErrorBoundary> */}
+          </div>
+        </div>
+      </Router>
+    );
+  }
 }
 
+function mapStateToProps(state) {
+  return { main: state.main };
+}
 
-export default Main;
+function mapDispatchToProps(dispatch) {
+  return {
+    actionsMain: bindActionCreators(mainActions, dispatch)
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Main);

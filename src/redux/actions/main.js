@@ -45,3 +45,17 @@ export const get_profile_by_id = id => {
       });
   };
 };
+
+export const tes=()=>{
+  return dispatch=>{
+    dispatch(toggle_loader(true));
+    axios
+    .get("https://pomber.github.io/covid19/timeseries.json?=")
+    .then(resp=>{
+      dispatch(put_data("covid_data",resp.data));
+    })
+    .then(() => {
+      dispatch(toggle_loader(false));
+    });
+  };
+};
