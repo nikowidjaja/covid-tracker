@@ -10,9 +10,8 @@ import * as mainActions from "../redux/actions/main";
 const NoMatch = () => <div>404 Not Found</div>;
 
 class Main extends Component {
-  componentDidMount(){
+  componentWillMount() {
     this.props.actionsMain.get_data();
-    
   }
   render() {
     return (
@@ -21,7 +20,7 @@ class Main extends Component {
           <div className="content-container">
             {/* <ErrorBoundary> */}
             <Switch>
-    <Route exact path="/" component={() => <Home {...this.props} /> }/>
+              <Route exact path="/" render={() => <Home {...this.props} />} />
               <Route component={NoMatch} />
             </Switch>
             {/* </ErrorBoundary> */}

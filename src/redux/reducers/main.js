@@ -5,6 +5,7 @@ const main_state = {
 	// 		regist_id : false
 	// 	}
 	// },
+	filter:"",
 	covid_data:false,
 	loader: false,
     lang_json: false,

@@ -4,31 +4,42 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as mainActions from "../redux/actions/main";
 
-// const renderList = covid => {
-//   console.log(covid);
-//   let covid_map = covid.map((data, i) => (
-//     <div key={i}>
+var countries = [];
+const renderCountry = (fullData, filters) => {
+  var country = Object.keys(fullData);
 
-// <h3>DATE : {covid && data.date}</h3>
-// <h3>CONFIRMED : {covid && data.confirmed}</h3>
-// <h3>DEATH : {covid && data.deaths}</h3>
-// <h3>RECOVERED : {covid && data.recovered}</h3>
-//       <br />
-//     </div>
-//   ));
-//   return covid_map;
-// };
+  filters = filters.toLowerCase();
+  for (var i = 0; i < country.length; i++) {
+    country[i] = country[i].toLowerCase();
+  }
 
-const renderList = fullData => {
-  // console.log(fullData);
-  // console.log(Object.keys(fullData));
-  let List = Object.keys(fullData).map((data, i) => (
+  countries = country.filter(country => country.includes(filters));
+  for (var j = 0; j < countries.length; j++) {
+    countries[j] = countries[j].charAt(0).toUpperCase() + countries[j].slice(1);
+  }
+};
+
+const renderList = (countries, fullData) => {
+  let List = countries.map((data, i) => (
     <div key={i}>
-      <h1>COUNTRY NAME : {data}</h1>
-      <h3>DATE : {fullData[data][fullData[data].length - 1].date}</h3>
-      <h3>CONFIRMED : {fullData[data][fullData[data].length - 1].confirmed}</h3>
-      <h3>DEATH : {fullData[data][fullData[data].length - 1].deaths}</h3>
-      <h3>RECOVERED : {fullData[data][fullData[data].length - 1].recovered}</h3>
+      <h1>{data}</h1>
+
+      <h3>
+        DATE :{" "}
+        {fullData[data] && fullData[data][fullData[data].length - 1].date}
+      </h3>
+      <h3>
+        CONFIRMED :{" "}
+        {fullData[data] && fullData[data][fullData[data].length - 1].confirmed}
+      </h3>
+      <h3>
+        DEATH :{" "}
+        {fullData[data] && fullData[data][fullData[data].length - 1].deaths}
+      </h3>
+      <h3>
+        RECOVERED :{" "}
+        {fullData[data] && fullData[data][fullData[data].length - 1].recovered}
+      </h3>
     </div>
   ));
 
@@ -36,11 +47,24 @@ const renderList = fullData => {
 };
 
 class Home extends Component {
-  render() {
-    // console.log(this.props.main.covid_data);
-    var fullData = this.props.main.covid_data;
+  handleChange = event => {
+    event.persist();
+    let data = event.target.value;
+    console.log(data);
 
-    return <div>{fullData && renderList(fullData)}</div>;
+    this.props.actionsMain.put_data("filter", data);
+  };
+  render() {
+    var fullData = this.props.main.covid_data;
+    var filters = this.props.main.filter;
+    renderCountry(fullData, filters);
+
+    return (
+      <React.Fragment>
+        <input type="text" onChange={e => this.handleChange(e)} />
+        <div>{fullData && renderList(countries, fullData)}</div>
+      </React.Fragment>
+    );
   }
 }
 
