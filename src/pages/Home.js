@@ -5,15 +5,19 @@ import { bindActionCreators } from "redux";
 import * as mainActions from "../redux/actions/main";
 
 var countries = [];
+
+const toLower = country => {
+  country = country.toLowerCase();
+
+  return country;
+};
+
 const renderCountry = (fullData, filters) => {
   var country = Object.keys(fullData);
 
   filters = filters.toLowerCase();
-  for (var i = 0; i < country.length; i++) {
-    country[i] = country[i].toLowerCase();
-  }
 
-  countries = country.filter(country => country.includes(filters));
+  countries = country.filter(country => toLower(country).includes(filters));
   for (var j = 0; j < countries.length; j++) {
     countries[j] = countries[j].charAt(0).toUpperCase() + countries[j].slice(1);
   }
@@ -50,8 +54,6 @@ class Home extends Component {
   handleChange = event => {
     event.persist();
     let data = event.target.value;
-    console.log(data);
-
     this.props.actionsMain.put_data("filter", data);
   };
   render() {
