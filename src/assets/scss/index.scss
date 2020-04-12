@@ -1,9 +1,18 @@
+@import 'carousel-field';
+@import 'fonts';
+@import 'home';
+@import 'navbar'; 
+@import 'infographics';
+@import 'search';
+@import 'footer';
+
 * {
   margin: 0;
   padding: 0;
 }
 
 :root {
+  
   font-size: 1.4vw;
   @media only screen and (max-width: 1024px) {
     font-size: 1.6vw;
@@ -12,18 +21,24 @@
     font-size: 1.75vw;
   }
   @media only screen and (max-width: 425px) {
-    font-size: 2.75vw;
+    font-size: 3vw;
   }
+  @media screen and (orientation:portrait){
+    overflow-x: hidden;
+}
 }
 
 html {
+
   scroll-behavior: smooth;
-  background: #fcf0e3;
+  background: #f3f2f8;
 }
 
 body {
   width: 100%;
   height: 100%;
+  background: #f3f2f8 !important;
+  @include montserrat;
 }
 
 button {
@@ -49,6 +64,4 @@ button {
   }
 }
 
-.asd{
-    background:red;
-}
+

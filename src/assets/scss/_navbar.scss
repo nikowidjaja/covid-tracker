@@ -1,0 +1,38 @@
+// .navbar {
+//   padding-left: 5vw;
+//   @media screen and (orientation: portrait) {
+//     background-color: #f7d7b5;
+//   }
+//   @media screen and (orientation: landscape) {
+//     position: static;
+//   }
+// }
+// .navbar-nav {
+//   padding-left: 20vw;
+//   @media screen and (orientation: portrait) {
+//     padding-left: 0;
+//   }
+// }
+
+// .nav-link {
+//   @media screen and (orientation: portrait) {
+//     text-align: center;
+//     font-size: 1.75rem;
+//     border-bottom: 0.2px double;
+//   }
+// }
+
+.navbar-brand {
+  width: 20%;
+  margin-right: 30%;
+  @media screen and (orientation: portrait){
+    width: 30%;
+  }
+  img{
+    width: 100%;
+  }
+}
+
+// .logo{
+//   width: 30%;
+// }

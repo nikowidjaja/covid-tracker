@@ -47,17 +47,45 @@ export const get_profile_by_id = id => {
 };
 
 export const get_data=()=>{
-  return dispatch=>{
+  return async dispatch=>{
     dispatch(toggle_loader(true));
-    axios
+    await axios
     .get("https://pomber.github.io/covid19/timeseries.json?=")
     .then(resp=>{
-      // console.log(resp.data);
+
       dispatch(put_data("covid_data",resp.data));
-      //resp.data["Indonesia"][resp.data["Indonesia"].length-1]
+
     })
     .then(() => {
       dispatch(toggle_loader(false));
     });
   };
 };
+
+export const get_infographics=()=>{
+  return async dispatch=>{
+    dispatch(toggle_loader(true));
+    await axios
+    .get("https://covid2019-api.herokuapp.com/v2/total")
+    .then(resp=>{
+      dispatch(put_data("total_infographics",resp.data));
+    })
+    .then(() => {
+      dispatch(toggle_loader(false));
+    });
+  }
+}
+
+export const get_timeseries=()=>{
+  return async dispatch=>{
+    dispatch(toggle_loader(true));
+    await axios
+    .get("https://covid2019-api.herokuapp.com/v2/timeseries/global")
+    .then(resp=>{
+      dispatch(put_data("global_timeseries",resp.data));
+    })
+    .then(()=>{
+      dispatch(toggle_loader(false));
+    });
+  }
+}

@@ -4,6 +4,10 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 import Main from './base/Main';
 import './assets/scss/index.scss';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 // REDUX
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';

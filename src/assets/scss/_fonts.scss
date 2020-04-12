@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'montserrat';
+    src: url('../fonts/Montserrat-Regular.ttf');
+}
+@mixin montserrat {
+    font-family: 'montserrat', sans-serif !important;
+}
+
+@font-face {
+    font-family: 'montserrat-bold';
+    src: url('../fonts/Montserrat-Bold.ttf');
+}
+@mixin montserrat-bold{
+    font-family: 'montserrat-bold', sans-serif !important;
+}
+
+@font-face {
+    font-family: 'montserrat-medium';
+    src: url('../fonts/Montserrat-Medium.ttf');
+}
+@mixin montserrat-medium{
+    font-family: 'montserrat-medium', sans-serif !important;
+}

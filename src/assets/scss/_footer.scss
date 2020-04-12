@@ -1,0 +1,49 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.7rem;
+    background-color: black;
+    min-height: 25vh;
+    text-align: center;
+    color: white;
+ 
+    justify-content: center;
+    align-items: center;
+    @media screen and (orientation:portrait){
+        min-height: 10vh;
+    }
+
+    p{
+        margin-bottom: 0;
+        font-size: 0.7rem;
+    }
+
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
+    
+    a:hover 
+    {
+         color:#00A0C6; 
+         text-decoration:none; 
+         cursor:pointer;  
+    }
+
+    &__image{
+        display: flex;
+        width: 15%;
+        justify-content: space-evenly;
+    
+        img{
+            filter:invert(100%);
+            width: 20%;
+        }
+        img:hover{
+            box-shadow:0 0 25px yellow;
+            cursor: pointer;
+        }
+    }
+
+    
+}

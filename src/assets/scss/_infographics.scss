@@ -1,0 +1,78 @@
+.infographics {
+  padding-top: 3vh;
+  display: flex;
+  @media screen and (orientation: portrait) {
+    flex-direction: column;
+  }
+  &__left {
+    width: 27%;
+    @media screen and (orientation: portrait) {
+      width: 100%;
+    }
+    margin-right: 3.5vw;
+    display: flex;
+    flex-direction: column;
+    &__header {
+      padding: 7vh 0 3vh 0;
+      @include montserrat-bold;
+      @media screen and (orientation: portrait) {
+        text-align: center;
+        font-size: 4rem;
+      }
+    }
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      padding: 8.6%;
+      padding-bottom: 2%;
+      margin-bottom: 5%;
+      background-color: white;
+      border-radius: 15px;
+      text-transform: capitalize;
+      font-size: 0.9rem;
+      @media screen and (orientation: portrait) {
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+      &__count {
+        @include montserrat-bold;
+        font-weight: bolder;
+        font-size: 1.4rem;
+        position: relative;
+        top: 5%;
+      }
+      h5 {
+        @include montserrat-medium;
+        font-weight: bolder;
+        font-size: 0.9rem;
+        @media screen and (orientation: portrait) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  &__right {
+    width: 73%;
+    padding: 7vh 0;
+    border-radius: 25px;
+    @media screen and (orientation: portrait) {
+      margin-left: 5vw;
+      margin-right: 5vw;
+      width: 90%;
+    }
+    &__header {
+      padding-bottom: 3vh;
+
+      @include montserrat-bold;
+      h1 {
+        // display: inline;
+        @media screen and (orientation: portrait) {
+          text-align: center;
+          display: block;
+font-size:4rem;
+        }
+      }
+    }
+  }
+}

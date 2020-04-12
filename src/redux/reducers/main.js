@@ -8,7 +8,9 @@ const main_state = {
 	filter:"",
 	covid_data:false,
 	loader: false,
-    lang_json: false,
+	lang_json: false,
+total_infographics:false,
+global_timeseries:false,
 	// campus : [],
 	// profile: {
 	// 	t_open : false

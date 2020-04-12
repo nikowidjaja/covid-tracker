@@ -12,6 +12,8 @@ const NoMatch = () => <div>404 Not Found</div>;
 class Main extends Component {
   componentWillMount() {
     this.props.actionsMain.get_data();
+    this.props.actionsMain.get_infographics();
+    this.props.actionsMain.get_timeseries();
   }
   render() {
     return (

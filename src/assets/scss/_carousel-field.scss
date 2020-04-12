@@ -1,0 +1,92 @@
+@import 'fonts';
+
+.sliders {
+  display: flex !important;
+  flex-direction: row;
+  margin: auto;
+  background-color: white;
+  border-radius: 20px;
+  min-height: 80vh;
+  
+  @media only screen and (orientation: portrait) {
+    flex-direction: column;
+    border-radius: 0;
+    min-height: 90vh;
+  }
+
+  &__text {
+    width: 40%;
+    padding: 5% 0 0 5%;
+
+    @media only screen and (orientation: portrait) {
+      width: 70%;
+    }
+
+    h1 {
+      @include montserrat-bold;
+      padding: 2.5% 0;
+      font-size: 2.5rem !important;
+      font-weight: 800;
+      @media only screen and (orientation: portrait) {
+        font-size: 3.5rem !important;
+      }
+    }
+
+    p {
+      padding-bottom: 7%;
+    }
+
+    &__button {
+      display: flex;
+      background-color: black;
+      border-radius: 30px;
+      width: 50%;
+      height: 3.5rem;
+      color: white;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      @media only screen and (orientation: portrait) {
+        margin-bottom: 3vh;
+      }
+    }
+  }
+
+  &__image {
+    width: 50%;
+    padding-bottom: 2.3%;
+
+    @media only screen and (orientation: portrait) {
+      width: 80%;
+      margin:0 auto;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.slick-dots {
+  bottom: -5vh !important;
+  @media only screen and (orientation: portrait) {
+    // bottom:2vh !important;
+  }
+  
+}
+
+.slick-dots li button:before {
+  font-size: 12px !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 30px !important;
+  @media only screen and (orientation: portrait) {
+   display: none;
+  }
+}
+
+.slick-arrow{
+  display: none !important;
+}
