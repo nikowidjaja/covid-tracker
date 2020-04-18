@@ -11,10 +11,10 @@ export default class Home extends Component {
         <div className="home">
           <Navbar />
           <Carousel />
-          <Infographics/>
+          <Infographics />
         </div>
 
-        <Footer/>
+        <Footer />
 
       </React.Fragment>
     );
