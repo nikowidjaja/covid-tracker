@@ -66,11 +66,12 @@
 
       @include montserrat-bold;
       h1 {
-        // display: inline;
+        display: inline;
         @media screen and (orientation: portrait) {
+          padding-bottom: 3vh;
           text-align: center;
           display: block;
-font-size:4rem;
+          font-size: 4rem;
         }
       }
     }

@@ -42,31 +42,31 @@ const renderList = (countries, fullData) => {
         {" "}
         {fullData[data] && fullData[data][fullData[data].length - 1].confirmed}
         <br />
-        <p className="lighter">
-          {data==="COUNTRY NOT FOUND"?"":"+"}
+        <p className="lighten">
+          {data === "COUNTRY NOT FOUND" ? "" : "+"}
           {fullData[data] &&
             fullData[data][fullData[data].length - 1].confirmed -
-              fullData[data][fullData[data].length - 2].confirmed}
+            fullData[data][fullData[data].length - 2].confirmed}
         </p>
       </td>
       <td>
         {fullData[data] && fullData[data][fullData[data].length - 1].deaths}
         <br />
-        <p className="lighter">
-        {data==="COUNTRY NOT FOUND"?"":"+"}
+        <p className="lighten">
+          {data === "COUNTRY NOT FOUND" ? "" : "+"}
           {fullData[data] &&
             fullData[data][fullData[data].length - 1].deaths -
-              fullData[data][fullData[data].length - 2].deaths}
+            fullData[data][fullData[data].length - 2].deaths}
         </p>
       </td>
       <td>
         {fullData[data] && fullData[data][fullData[data].length - 1].recovered}
         <br />
-        <p className="lighter">
-            {data==="COUNTRY NOT FOUND"?"":"+"}
+        <p className="lighten">
+          {data === "COUNTRY NOT FOUND" ? "" : "+"}
           {fullData[data] &&
             fullData[data][fullData[data].length - 1].recovered -
-              fullData[data][fullData[data].length - 2].recovered}
+            fullData[data][fullData[data].length - 2].recovered}
         </p>
       </td>
     </tr>
@@ -80,42 +80,41 @@ const renderList = (countries, fullData) => {
 };
 
 
-  const sortTable=()=> { 
-    var table, i, x, y; 
-    table = document.getElementById("countryTable"); 
-    console.log(table);
-    
-    var switching = true; 
-  
-    // Run loop until no switching is needed 
-    while (switching) { 
-        switching = false; 
-        var rows = table.rows; 
-  
-        // Loop to go through all rows 
-        for (i = 1; i < (rows.length - 1); i++) { 
-            var Switch = false; 
-  
-            // Fetch 2 elements that need to be compared 
-            x = rows[i].getElementsByTagName("td")[1]; 
-            y = rows[i + 1].getElementsByTagName("td")[1]; 
-  
-            // Check if 2 rows need to be switched 
-            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) 
-                { 
-  
-                // If yes, mark Switch as needed and break loop 
-                Switch = true; 
-                break; 
-            } 
-        } 
-        if (Switch) { 
-            // Function to switch rows and mark switch as completed 
-            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]); 
-            switching = true; 
-        } 
-    } 
-  } 
+const sortTable = () => {
+  var table, i, x, y;
+  table = document.getElementById("countryTable");
+  console.log(table);
+
+  var switching = true;
+
+  // Run loop until no switching is needed 
+  while (switching) {
+    switching = false;
+    var rows = table.rows;
+
+    // Loop to go through all rows 
+    for (i = 1; i < (rows.length - 1); i++) {
+      var Switch = false;
+
+      // Fetch 2 elements that need to be compared 
+      x = rows[i].getElementsByTagName("td")[1];
+      y = rows[i + 1].getElementsByTagName("td")[1];
+
+      // Check if 2 rows need to be switched 
+      if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+
+        // If yes, mark Switch as needed and break loop 
+        Switch = true;
+        break;
+      }
+    }
+    if (Switch) {
+      // Function to switch rows and mark switch as completed 
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
 
 
 const renderTableHeader = () => {
@@ -151,14 +150,16 @@ class Search extends Component {
     return (
       <React.Fragment>
 
-        <div class="container-search">
+    
+        <div className="search-bar">
           <input
             onChange={(e) => this.handleChange(e)}
             type="text"
             placeholder="Search..."
           />
-          <div class="search"></div>
+          <img src={require("../assets/images/magnify.png")} alt="/" />
         </div>
+      
 
         <div className="table-country">
           <div> {renderTableHeader()}</div>

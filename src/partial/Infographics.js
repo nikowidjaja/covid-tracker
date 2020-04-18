@@ -31,7 +31,7 @@ class Infographics extends Component {
     const RenderItem = () => {
       const list = ["confirmed", "deaths", "recovered"];
       return list.map((datas, i) => {
-        return (
+        return ( 
           <div key={i} className="infographics__left__item">
             <div className="infographics__left__item__title">
               <h5> {datas} </h5>

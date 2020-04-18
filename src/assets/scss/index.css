@@ -278,8 +278,13 @@
   font-family: 'montserrat-bold', sans-serif !important;
 }
 
+.infographics__right__header h1 {
+  display: inline;
+}
+
 @media screen and (orientation: portrait) {
   .infographics__right__header h1 {
+    padding-bottom: 3vh;
     text-align: center;
     display: block;
     font-size: 4rem;
@@ -289,6 +294,7 @@
 .table-header {
   padding: 2%;
   padding-left: 4%;
+  margin-top: 4vh;
   margin-bottom: 4vh;
   background-color: white;
   border-radius: 30px;
@@ -341,14 +347,44 @@
   text-align: left;
 }
 
-.lighter {
+.lighten {
   font-family: 'montserrat', sans-serif !important;
 }
 
 .search-bar {
-  border-radius: 25px;
-  width: 30%;
-  border: 3px solid black;
+  position: relative;
+  display: inline;
+}
+
+.search-bar img {
+  width: 5%;
+  position: absolute;
+  left: 43%;
+  bottom: 0;
+}
+
+@media screen and (orientation: portrait) {
+  .search-bar img {
+    left: 7%;
+    top: 2%;
+  }
+}
+
+.search-bar input[type=text] {
+  margin-left: 27%;
+  padding: 1%;
+  border-radius: 20px;
+  border: none;
+  padding-left: 4vw;
+}
+
+@media screen and (orientation: portrait) {
+  .search-bar input[type=text] {
+    margin: 0;
+    width: 100%;
+    padding: 3%;
+    padding-left: 15%;
+  }
 }
 
 .container-search {
@@ -505,17 +541,35 @@
 }
 
 .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-size: 0.7rem;
   background-color: black;
   min-height: 25vh;
   text-align: center;
   color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (orientation: portrait) {
   .footer {
     min-height: 10vh;
   }
+}
+
+.footer p {
+  margin-bottom: 0;
+  font-size: 0.7rem;
 }
 
 .footer a {
@@ -526,6 +580,28 @@
 .footer a:hover {
   color: #00A0C6;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.footer__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 15%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.footer__image img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  width: 20%;
+}
+
+.footer__image img:hover {
+  -webkit-box-shadow: 0 0 25px yellow;
+          box-shadow: 0 0 25px yellow;
   cursor: pointer;
 }
 
