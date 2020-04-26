@@ -40,6 +40,9 @@
     height: 10vh;
     border-bottom: 2.5px solid #f0f0f0;
   }
+  tr:last-child {
+    border: 0;
+  }
   td {
     text-align: center;
     padding-top: 2vh;
@@ -54,31 +57,33 @@
   @include montserrat;
 }
 
-.search-bar{
+.search-bar {
   position: relative;
   display: inline;
-  img{
+
+  img {
     width: 5%;
     position: absolute;
-    left:43%;
+    left: 43%;
     bottom: 0;
-    @media screen and (orientation:portrait){
-      left:7%;
-      top:2%;
+    @media screen and (orientation: portrait) {
+      left: 7%;
+      top: 2%;
     }
   }
 
-  input[type=text]{
-    margin-left:27%;
-    padding:1%;
+  input[type="text"] {
+    margin-left: 27%;
+    padding: 1%;
     border-radius: 20px;
-    border:none;
-    padding-left:4vw;
+    border: none;
+    padding-left: 4vw;
+    outline: none;
 
-    @media screen and (orientation:portrait){
-      margin:0;
+    @media screen and (orientation: portrait) {
+      margin: 0;
       width: 100%;
-      padding:3%;
+      padding: 3%;
       padding-left: 15%;
     }
   }
@@ -115,7 +120,6 @@
     // box-shadow: 0 0 25px 0 crimson;
     &:hover {
       cursor: pointer;
-    
     }
     &::before {
       content: "";
@@ -174,7 +178,6 @@
     letter-spacing: 0.1em;
     &:hover {
       cursor: pointer;
-      
     }
     &:focus {
       width: 300px;
