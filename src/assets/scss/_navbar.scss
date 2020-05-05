@@ -25,7 +25,7 @@
 .navbar-brand {
   width: 20%;
   margin-right: 30%;
-  @media screen and (orientation: portrait){
+  @media screen and (max-width:780px){
     width: 30%;
   }
   img{

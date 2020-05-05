@@ -1,4 +1,4 @@
-@import 'fonts';
+@import "fonts";
 
 .sliders {
   display: flex !important;
@@ -7,9 +7,9 @@
   background-color: white;
   border-radius: 20px;
   min-height: 80vh;
-outline:none;
-  
-  @media only screen and (orientation: portrait) {
+  outline: none;
+
+  @media only screen and (max-width: 780px) {
     flex-direction: column;
     border-radius: 0;
     min-height: 90vh;
@@ -19,7 +19,7 @@ outline:none;
     width: 40%;
     padding: 5% 0 0 5%;
 
-    @media only screen and (orientation: portrait) {
+    @media only screen and (max-width: 780px) {
       width: 70%;
     }
 
@@ -28,7 +28,7 @@ outline:none;
       padding: 2.5% 0;
       font-size: 2.5rem !important;
       font-weight: 800;
-      @media only screen and (orientation: portrait) {
+      @media only screen and (max-width: 780px) {
         font-size: 3.5rem !important;
       }
     }
@@ -48,7 +48,7 @@ outline:none;
       justify-content: center;
       cursor: pointer;
 
-      @media only screen and (orientation: portrait) {
+      @media only screen and (max-width: 780px) {
         margin-bottom: 3vh;
       }
     }
@@ -58,9 +58,9 @@ outline:none;
     width: 50%;
     padding-bottom: 2.3%;
 
-    @media only screen and (orientation: portrait) {
+    @media only screen and (max-width: 780px) {
       width: 80%;
-      margin:0 auto;
+      margin: 0 auto;
     }
     img {
       width: 100%;
@@ -70,10 +70,9 @@ outline:none;
 
 .slick-dots {
   bottom: -5vh !important;
-  @media only screen and (orientation: portrait) {
+  @media only screen and (max-width: 780px) {
     // bottom:2vh !important;
   }
-  
 }
 
 .slick-dots li button:before {
@@ -83,11 +82,11 @@ outline:none;
 .slick-prev:before,
 .slick-next:before {
   font-size: 30px !important;
-  @media only screen and (orientation: portrait) {
-   display: none;
+  @media only screen and (max-width: 780px) {
+    display: none;
   }
 }
 
-.slick-arrow{
+.slick-arrow {
   display: none !important;
 }

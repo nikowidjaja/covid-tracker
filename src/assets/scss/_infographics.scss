@@ -1,12 +1,12 @@
 .infographics {
   padding-top: 3vh;
   display: flex;
-  @media screen and (orientation: portrait) {
+  @media screen and (max-width:780px) {
     flex-direction: column;
   }
   &__left {
     width: 27%;
-    @media screen and (orientation: portrait) {
+    @media screen and (max-width:780px) {
       width: 100%;
     }
     margin-right: 3.5vw;
@@ -15,7 +15,7 @@
     &__header {
       padding: 7vh 0 3vh 0;
       @include montserrat-bold;
-      @media screen and (orientation: portrait) {
+      @media screen and (max-width:780px) {
         text-align: center;
         font-size: 4rem;
       }
@@ -30,7 +30,7 @@
       border-radius: 15px;
       text-transform: capitalize;
       font-size: 0.9rem;
-      @media screen and (orientation: portrait) {
+      @media screen and (max-width:780px) {
         margin-left: 5%;
         margin-right: 5%;
       }
@@ -45,7 +45,7 @@
         @include montserrat-medium;
         font-weight: bolder;
         font-size: 0.9rem;
-        @media screen and (orientation: portrait) {
+        @media screen and (max-width:780px) {
           font-size: 1.5rem;
         }
       }
@@ -56,7 +56,7 @@
     width: 73%;
     padding: 7vh 0;
     border-radius: 25px;
-    @media screen and (orientation: portrait) {
+    @media screen and (max-width:780px) {
       margin-left: 5vw;
       margin-right: 5vw;
       width: 90%;
@@ -67,7 +67,7 @@
       @include montserrat-bold;
       h1 {
         display: inline;
-        @media screen and (orientation: portrait) {
+        @media screen and (max-width:780px) {
           padding-bottom: 3vh;
           text-align: center;
           display: block;

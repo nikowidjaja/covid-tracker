@@ -1,7 +1,7 @@
 
 .home{
     padding:5vh 8vw;
-    @media only screen and (orientation:portrait){
+    @media only screen and (max-width:780px){
         padding:0;
       }
 }

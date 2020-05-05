@@ -25,9 +25,10 @@
   background-color: white;
   border-radius: 20px;
   min-height: 80vh;
+  outline: none;
 }
 
-@media only screen and (orientation: portrait) {
+@media only screen and (max-width: 780px) {
   .sliders {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -43,7 +44,7 @@
   padding: 5% 0 0 5%;
 }
 
-@media only screen and (orientation: portrait) {
+@media only screen and (max-width: 780px) {
   .sliders__text {
     width: 70%;
   }
@@ -56,7 +57,7 @@
   font-weight: 800;
 }
 
-@media only screen and (orientation: portrait) {
+@media only screen and (max-width: 780px) {
   .sliders__text h1 {
     font-size: 3.5rem !important;
   }
@@ -84,7 +85,7 @@
   cursor: pointer;
 }
 
-@media only screen and (orientation: portrait) {
+@media only screen and (max-width: 780px) {
   .sliders__text__button {
     margin-bottom: 3vh;
   }
@@ -95,7 +96,7 @@
   padding-bottom: 2.3%;
 }
 
-@media only screen and (orientation: portrait) {
+@media only screen and (max-width: 780px) {
   .sliders__image {
     width: 80%;
     margin: 0 auto;
@@ -119,7 +120,7 @@
   font-size: 30px !important;
 }
 
-@media only screen and (orientation: portrait) {
+@media only screen and (max-width: 780px) {
   .slick-prev:before,
   .slick-next:before {
     display: none;
@@ -149,7 +150,7 @@
   padding: 5vh 8vw;
 }
 
-@media only screen and (orientation: portrait) {
+@media only screen and (max-width: 780px) {
   .home {
     padding: 0;
   }
@@ -160,7 +161,7 @@
   margin-right: 30%;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (max-width: 780px) {
   .navbar-brand {
     width: 30%;
   }
@@ -177,7 +178,7 @@
   display: flex;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (max-width: 780px) {
   .infographics {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -198,7 +199,7 @@
           flex-direction: column;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (max-width: 780px) {
   .infographics__left {
     width: 100%;
   }
@@ -209,7 +210,7 @@
   font-family: 'montserrat-bold', sans-serif !important;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (max-width: 780px) {
   .infographics__left__header {
     text-align: center;
     font-size: 4rem;
@@ -232,7 +233,7 @@
   font-size: 0.9rem;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (max-width: 780px) {
   .infographics__left__item {
     margin-left: 5%;
     margin-right: 5%;
@@ -253,7 +254,7 @@
   font-size: 0.9rem;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (max-width: 780px) {
   .infographics__left__item h5 {
     font-size: 1.5rem;
   }
@@ -265,7 +266,7 @@
   border-radius: 25px;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (max-width: 780px) {
   .infographics__right {
     margin-left: 5vw;
     margin-right: 5vw;
@@ -282,7 +283,7 @@
   display: inline;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (max-width: 780px) {
   .infographics__right__header h1 {
     padding-bottom: 3vh;
     text-align: center;
@@ -337,6 +338,10 @@
   border-bottom: 2.5px solid #f0f0f0;
 }
 
+.table-content tr:last-child {
+  border: 0;
+}
+
 .table-content td {
   text-align: center;
   padding-top: 2vh;
@@ -363,23 +368,24 @@
   bottom: 0;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (max-width: 780px) {
   .search-bar img {
     left: 7%;
     top: 2%;
   }
 }
 
-.search-bar input[type=text] {
+.search-bar input[type="text"] {
   margin-left: 27%;
   padding: 1%;
   border-radius: 20px;
   border: none;
   padding-left: 4vw;
+  outline: none;
 }
 
-@media screen and (orientation: portrait) {
-  .search-bar input[type=text] {
+@media screen and (max-width: 780px) {
+  .search-bar input[type="text"] {
     margin: 0;
     width: 100%;
     padding: 3%;
@@ -397,7 +403,7 @@
   height: 100px;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (max-width: 780px) {
   .container-search {
     left: 7vw;
   }
@@ -561,7 +567,7 @@
           align-items: center;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (max-width: 780px) {
   .footer {
     min-height: 10vh;
   }
@@ -632,7 +638,7 @@
   }
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (max-width: 780px) {
   :root {
     overflow-x: hidden;
   }
@@ -671,7 +677,7 @@ button {
   padding-top: 5vh;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (max-width: 780px) {
   .text-default {
     padding-top: 2vh;
   }
