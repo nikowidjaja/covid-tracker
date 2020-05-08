@@ -1,12 +1,12 @@
 .infographics {
   padding-top: 3vh;
   display: flex;
-  @media screen and (max-width:780px) {
+  @media screen and (max-width:980px) {
     flex-direction: column;
   }
   &__left {
     width: 27%;
-    @media screen and (max-width:780px) {
+    @media screen and (max-width:980px) {
       width: 100%;
     }
     margin-right: 3.5vw;
@@ -15,7 +15,8 @@
     &__header {
       padding: 7vh 0 3vh 0;
       @include montserrat-bold;
-      @media screen and (max-width:780px) {
+      font-size: 1.5rem;
+      @media screen and (max-width:980px) {
         text-align: center;
         font-size: 4rem;
       }
@@ -29,23 +30,26 @@
       background-color: white;
       border-radius: 15px;
       text-transform: capitalize;
-      font-size: 0.9rem;
-      @media screen and (max-width:780px) {
+      font-size: 0.8rem;
+      @media screen and (max-width:980px) {
         margin-left: 5%;
         margin-right: 5%;
       }
       &__count {
         @include montserrat-bold;
         font-weight: bolder;
-        font-size: 1.4rem;
+        font-size: 1rem;
         position: relative;
         top: 5%;
+        @media screen and (max-width:980px) {
+         font-size: 1.5rem;
+        }
       }
       h5 {
         @include montserrat-medium;
         font-weight: bolder;
         font-size: 0.9rem;
-        @media screen and (max-width:780px) {
+        @media screen and (max-width:980px) {
           font-size: 1.5rem;
         }
       }
@@ -56,7 +60,7 @@
     width: 73%;
     padding: 7vh 0;
     border-radius: 25px;
-    @media screen and (max-width:780px) {
+    @media screen and (max-width:980px) {
       margin-left: 5vw;
       margin-right: 5vw;
       width: 90%;
@@ -66,8 +70,9 @@
 
       @include montserrat-bold;
       h1 {
-        display: inline;
-        @media screen and (max-width:780px) {
+        font-size: 1.5rem;
+
+        @media screen and (max-width:980px) {
           padding-bottom: 3vh;
           text-align: center;
           display: block;

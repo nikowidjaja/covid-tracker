@@ -9,8 +9,9 @@
  
     justify-content: center;
     align-items: center;
-    @media screen and (max-width:780px){
+    @media screen and (max-width:980px){
         min-height: 10vh;
+        padding:5% 0;
     }
 
     p{
@@ -34,10 +35,15 @@
         display: flex;
         width: 15%;
         justify-content: space-evenly;
-    
+        @media screen and (max-width:980px){
+            width: 50%;
+         }
         img{
             filter:invert(100%);
             width: 20%;
+            @media screen and (max-width:980px){
+               width: 25%;
+            }
         }
         img:hover{
             box-shadow:0 0 25px yellow;

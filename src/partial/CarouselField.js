@@ -40,6 +40,7 @@ export default class CarouselField extends React.Component {
       accessibility: true,
       autoplaySpeed: 5000,
       arrow: false,
+      
     };
 
     return (

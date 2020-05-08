@@ -1,7 +1,9 @@
 
 .home{
-    padding:5vh 8vw;
-    @media only screen and (max-width:780px){
+    // padding:5vh 8vw;
+    max-width: 1200px;
+    margin:0 auto;
+    @media only screen and (max-width:980px){
         padding:0;
       }
 }

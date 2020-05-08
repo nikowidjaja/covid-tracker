@@ -1,10 +1,10 @@
-@import 'carousel-field';
-@import 'fonts';
-@import 'home';
-@import 'navbar'; 
-@import 'infographics';
-@import 'search';
-@import 'footer';
+@import "carousel-field";
+@import "fonts";
+@import "home";
+@import "navbar";
+@import "infographics";
+@import "search";
+@import "footer";
 
 * {
   margin: 0;
@@ -12,20 +12,32 @@
 }
 
 :root {
-  
-  font-size: 1.4vw;
-  @media only screen and (max-width: 1024px) {
-    font-size: 1.6vw;
-  }
-  @media only screen and (max-width: 786px) {
-    font-size: 1.75vw;
-  }
-  @media only screen and (max-width: 425px) {
-    font-size: 3vw;
-  }
-  @media screen and (max-width:780px){
+  // font-size: 1.4vw;
+  // @media only screen and (max-width: 1024px) {
+  //   font-size: 1.6vw;
+  // }
+  // @media only screen and (max-width: 786px) {
+  //   font-size: 1.75vw;
+  // }
+  // @media only screen and (max-width: 425px) {
+  //   font-size: 3vw;
+  // }
+  box-sizing: border-box;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1600 - 300)));
+  @media screen and (max-width: 780px) {
     overflow-x: hidden;
-}
+  }
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: whitesmoke;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: gray;
+  }
+
 }
 
 html {
@@ -58,9 +70,7 @@ button {
   line-height: 2rem;
   font-size: 1.2rem;
   padding-top: 5vh;
-  @media screen and (max-width:780px) {
+  @media screen and (max-width: 780px) {
     padding-top: 2vh;
   }
 }
-
-
