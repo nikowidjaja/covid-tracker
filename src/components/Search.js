@@ -10,7 +10,7 @@ var countries = [];
 
 const toLower = (country) => {
   country = country.toLowerCase();
-
+  
   return country;
 };
 
@@ -160,7 +160,6 @@ const sortTable = (currState) => {
     }
   }
 
-
 }
 
 
@@ -212,7 +211,7 @@ class Search extends Component {
   render() {
     var fullData = this.props.main.covid_data;
     var filters = this.props.main.filter;
-
+console.log(fullData);
     renderCountry(fullData, filters);
 
     return (

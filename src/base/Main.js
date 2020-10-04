@@ -18,7 +18,7 @@ class Main extends Component {
     this.props.actionsMain.get_timeseries();
   }
   render() {
-    console.log(this.props.main.loader);
+   
     
     return (
       <Router basename="/">

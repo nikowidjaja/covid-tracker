@@ -38,7 +38,6 @@ class Chartz extends Component {
             return data.recovered;
         });
 
-        console.log(deathList);
         this.setState({
             data: {
                 labels: dateList,

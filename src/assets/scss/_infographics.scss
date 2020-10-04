@@ -38,9 +38,9 @@
       &__count {
         @include montserrat-bold;
         font-weight: bolder;
-        font-size: 1rem;
+        font-size: 0.8rem;
         position: relative;
-        top: 5%;
+        top: 15%;
         @media screen and (max-width:980px) {
          font-size: 1.5rem;
         }
